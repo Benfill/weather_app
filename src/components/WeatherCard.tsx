@@ -43,8 +43,8 @@ const WeatherCard = (props: cardProps) => {
     </View>
   ) : (
     <View>
-      <Text>testt</Text>
-      <Image source={{ uri: process.env.EXPO_PUBLIC_WEATHER_MAP_ICON + '/01n@2x.png' }} />
+      <Text>test</Text>
+      <Image src={process.env.EXPO_PUBLIC_WEATHER_MAP_ICON + '/01n@2x.png'} />
     </View>
   );
 };

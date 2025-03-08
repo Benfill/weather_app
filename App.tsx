@@ -1,13 +1,10 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
+import WeatherCard from '~/components/WeatherCard';
 import './global.css';
 
 export default function App() {
   return (
     <>
-      <ScreenContent title="Home" path="App.tsx" />
-      <StatusBar style="auto" />
+      <WeatherCard city="rabat" />
     </>
   );
 }

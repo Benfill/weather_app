@@ -5,11 +5,6 @@ import { RootStackParamList } from '~/navigation/AppNavigator';
 
 type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 const HomeScreen = ({ navigation }: HomeScreenProps) => {
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.navigate('Details', { city: 'rabat' });
-    }, 5000);
-  }, []);
   return <View>Home</View>;
 };
 

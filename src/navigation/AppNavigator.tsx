@@ -9,9 +9,9 @@ import SearchScreen from '~/screens/SearchScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export type RootStackParamList = {
-  Home: undefined;
+  Home: { cityParam?: string };
   Details: { city: string };
-  Search: { city: string };
+  Search: undefined;
 };
 export default function AppNavigator() {
   return (

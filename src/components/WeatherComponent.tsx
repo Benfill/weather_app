@@ -9,6 +9,7 @@ import { RootStackParamList } from '~/navigation/AppNavigator';
 export type cardProps = {
   city: string | null;
   navigation: any;
+  setShowNotification: any;
 };
 
 const WeatherComponent = (props: cardProps) => {
@@ -102,7 +103,12 @@ const WeatherComponent = (props: cardProps) => {
           <Text className="mx-2 text-xl font-semibold text-white">{data.name}</Text>
           <Feather name="chevron-down" size={16} color="white" />
         </TouchableOpacity>
-        <Feather name="bell" size={22} color="white" />
+        <Feather
+          name="bell"
+          size={22}
+          color="white"
+          onPress={() => props.setShowNotification(true)}
+        />
       </View>
       <View className="flex h-full gap-40">
         <View>

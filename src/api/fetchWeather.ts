@@ -1,10 +1,15 @@
 import axios from 'axios';
 
 const WEATHER_API = process.env.EXPO_PUBLIC_WEATHER_MAP_API;
-const WEATHER_ID = process.env.EXPO_PUBLIC_WEATHER_MAP_APP_ID;
+const ID = process.env.EXPO_PUBLIC_WEATHER_MAP_APP_ID;
 
 export const fetchWeather = async (city: string) => {
-  const response = await axios.get(`${WEATHER_API}?q=${city}&APPID=${WEATHER_ID}`);
+  const response = await axios.get(WEATHER_API, {
+    params: {
+      q: city,
+      appid: ID,
+    },
+  });
   const data = await response.data;
   console.log(data);
 
@@ -17,7 +22,7 @@ export const fetchForecast = async (city: string) => {
     const forecastResponse = await axios.get(process.env.EXPO_PUBLIC_WEATHER_MAP_FORECAST_API, {
       params: {
         q: city,
-        appid: process.env.EXPO_PUBLIC_WEATHER_MAP_APP_ID,
+        appid: ID,
       },
     });
 
@@ -28,7 +33,7 @@ export const fetchForecast = async (city: string) => {
         params: {
           q: city,
           cnt: 7, // Number of days to fetch (max 16)
-          appid: process.env.EXPO_PUBLIC_WEATHER_MAP_APP_ID,
+          appid: ID,
         },
       }
     );

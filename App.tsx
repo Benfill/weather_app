@@ -1,10 +1,6 @@
-import WeatherCard from '~/components/WeatherCard';
 import './global.css';
+import AppNavigator from '~/navigation/AppNavigator';
 
 export default function App() {
-  return (
-    <>
-      <WeatherCard city="rabat" />
-    </>
-  );
+  return <AppNavigator />;
 }

@@ -42,11 +42,13 @@ const SearchBar = (props: SearchBarProps) => {
       </View>
 
       {/* Confirm Button */}
-      <TouchableOpacity
-        onPress={handleConfirm}
-        className="flex items-center justify-center rounded-xl bg-blue-500 py-3">
-        <Text className="font-semibold text-white">Confirm</Text>
-      </TouchableOpacity>
+      {search.length > 0 && (
+        <TouchableOpacity
+          onPress={handleConfirm}
+          className="flex items-center justify-center rounded-xl bg-blue-500 py-3">
+          <Text className="font-semibold text-white">Confirm</Text>
+        </TouchableOpacity>
+      )}
 
       {showList && (
         <View className="flex gap-6">

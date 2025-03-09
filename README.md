@@ -1,8 +1,11 @@
 # Weather App
 
 A modern React Native weather application built with Expo and NativeWind that provides real-time weather information with a clean, intuitive UI.
-![ScreenShot_1](https://github.com/user-attachments/assets/e7df5773-cc45-43bd-bd1b-d3d0ebfe1d6c)
-![ScreenShot_2](https://github.com/user-attachments/assets/28398d6f-ff98-4975-bfbb-c6f1602bcc5a)
+
+<div style="display: flex; flex-direction: row;">
+  <img src="https://github.com/user-attachments/assets/e7df5773-cc45-43bd-bd1b-d3d0ebfe1d6c" width="300" alt="ScreenShot_1" />
+  <img src="https://github.com/user-attachments/assets/28398d6f-ff98-4975-bfbb-c6f1602bcc5a" width="300" alt="ScreenShot_2" />
+</div>
 
 
 ## Features

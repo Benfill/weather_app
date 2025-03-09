@@ -54,7 +54,9 @@ const HomeScreen = ({ route, navigation }: HomeScreenProps) => {
           />
         </LinearGradient>
         {showNotification && <BlurView intensity={85} tint="dark" className="absolute inset-0" />}
-        {showNotification && <Notification onClose={() => setShowNotification(false)} />}
+        {showNotification && (
+          <Notification city={city} onClose={() => setShowNotification(false)} />
+        )}
       </View>
     </>
   );
